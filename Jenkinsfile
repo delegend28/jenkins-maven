@@ -34,7 +34,7 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 sh '''
-                    sudo cp /var/lib/jenkins/workspace/<replace_with_your_pipeline_name>/target/emraay-bank-app.war /opt/tomcat/webapps/
+                    sudo cp /var/lib/jenkins/workspace/assignment/target/emraay-bank-app.war /opt/tomcat/webapps/
                     sudo chown tomcat:tomcat /opt/tomcat/webapps/emraay-bank-app.war
                     sudo systemctl restart tomcat
                 '''
